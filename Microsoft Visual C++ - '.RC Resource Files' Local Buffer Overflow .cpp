@@ -210,5 +210,20 @@ void ProcessInput(int argc, char* argv[])
 		jmpOffset=jmp1Offset;
 		retOffset=retOffset1;
 	}
+     
+     outName=argv[2];
+}
+
+int main(int argc, char* argv[])
+{
+
+	ProcessInput(argc,argv);
+	CompileBuffer();
+	WriteBuffer();
+
+	return 0;
+}
+
+// milw0rm.com [2007-01-22]
 
 
