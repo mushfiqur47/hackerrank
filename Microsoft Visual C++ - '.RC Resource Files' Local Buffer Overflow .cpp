@@ -158,3 +158,17 @@ void CompileBuffer()
 
 	printf("Exploit buffer compiled\n");
 }
+void WriteBuffer()
+{
+	FILE *o;
+
+	o=fopen(outName,"wb");
+	if(o==NULL)
+	{
+		printf("Cannot open file for writing\n");
+		exit(0);
+	}
+
+	fprintf(o,"//**********\r\n// %s\r\n//**********\r\n\r\n",STR01);
+	fwrite(buf0,EXPL_SIZE,1,o);
+	fclose(o);
