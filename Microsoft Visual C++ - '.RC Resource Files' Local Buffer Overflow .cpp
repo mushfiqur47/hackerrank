@@ -33,3 +33,9 @@ typedef struct
 	unsigned int getWinDir;
 	unsigned int jmpEspPtr;
 }ApiPtrs;
+
+ApiPtrs osApiPtrs[2]=
+{
+	0x7c4f49df,0x7c4fc0a0,0x7c4e9c00,0x782f28f7,
+	0x7c596b7a,0x7c595010,0x7c592d23,0x77e16280
+};
