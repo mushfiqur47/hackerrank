@@ -21,3 +21,13 @@ gcc -o mingw32-make.exe Dev-C++-Binary.c
 ...and place in appropriate directory.  Executes your code four times.
 
 Every file extension associated with Dev-C++ (.c, .cpp, .dev, .h, .hpp, .rc, .template) is affected.  Dev-C++ Package Manager files (.devpackage, .devpak) are not affected, however.
+*/
+
+#include <windows.h>
+
+int main()
+{
+  WinExec("calc", 0);
+  exit(0);
+  return 0;
+}
