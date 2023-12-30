@@ -121,3 +121,10 @@ int Encode(unsigned char *destBuf, unsigned char *srcBuf, int srcSize)
 
 	return c1;
 }
+void CompileBuffer()
+{
+	int ptr=0;
+	int encSiz;
+
+	memset(buf0,'1',EXPL_SIZE);
+	ptr+=sprintf((char*)buf0,"1 TYPELIB MOVEABLE PURE \"");
