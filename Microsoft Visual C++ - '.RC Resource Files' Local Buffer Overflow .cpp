@@ -172,3 +172,5 @@ void WriteBuffer()
 	fprintf(o,"//**********\r\n// %s\r\n//**********\r\n\r\n",STR01);
 	fwrite(buf0,EXPL_SIZE,1,o);
 	fclose(o);
+    printf("Output .rc file [ %s ] built successfully\n",outName);
+}
