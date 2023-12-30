@@ -188,3 +188,10 @@ void ProcessInput(int argc, char* argv[])
 		printf("[outName]   output .rc exploit file name\n");
 		exit(0);
 	}
+
+      osId=atol(argv[1]);
+	if((osId<0)||(osId>1))
+	{
+		exit(0);
+	}
+
