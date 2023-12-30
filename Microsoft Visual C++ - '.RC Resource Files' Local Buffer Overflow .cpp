@@ -194,4 +194,12 @@ void ProcessInput(int argc, char* argv[])
 	{
 		exit(0);
 	}
+    if(osId==0)
+	{
+		espSub=espSub0;
+		fnamShift=fnamShift0;
+		jmpSeq=jmp0Seq;
+		jmpOffset=jmp0Offset;
+		retOffset=retOffset0;
+	}
 
