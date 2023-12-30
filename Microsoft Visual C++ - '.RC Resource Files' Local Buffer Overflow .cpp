@@ -25,3 +25,11 @@
 #define GETWINDIR_OFFSET 0x25
 #define ESPSUB_OFFSET 0x08
 #define FNAMSHIFT_OFFSET 0x02
+
+typedef struct
+{
+	unsigned int getStarInf;
+	unsigned int crePro;
+	unsigned int getWinDir;
+	unsigned int jmpEspPtr;
+}ApiPtrs;
