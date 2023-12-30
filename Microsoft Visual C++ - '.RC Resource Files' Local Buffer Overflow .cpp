@@ -78,3 +78,14 @@ unsigned char jmp0Seq[]=
 {
 	0xe9,0x28,0xff,0xff,0xff
 };
+
+unsigned char espSub0=0x4e;
+unsigned char espSub1=0x5c;
+unsigned char fnamShift0=0x0e;
+unsigned char fnamShift1=0x1c;
+unsigned char retOffset1=0xe7;
+unsigned char retOffset0=0xf5;
+unsigned char jmp1Offset=0xeb;
+unsigned char jmp0Offset=0xf0;
+unsigned short back3=0xf5eb;
+unsigned char back3Offs=0xf9;
