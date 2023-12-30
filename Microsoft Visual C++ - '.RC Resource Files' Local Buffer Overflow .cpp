@@ -202,4 +202,13 @@ void ProcessInput(int argc, char* argv[])
 		jmpOffset=jmp0Offset;
 		retOffset=retOffset0;
 	}
+    else
+	{
+		espSub=espSub1;
+		fnamShift=fnamShift1;
+		jmpSeq=jmp1Seq;
+		jmpOffset=jmp1Offset;
+		retOffset=retOffset1;
+	}
+
 
