@@ -99,3 +99,25 @@ unsigned char fnamShift;
 unsigned char *jmpSeq;
 unsigned char retOffset;
 unsigned char jmpOffset;
+
+int Encode(unsigned char *destBuf, unsigned char *srcBuf, int srcSize)
+{
+	int cnt,c1;
+
+	for(cnt=0,c1=0;cnt<srcSize;cnt++)
+	{
+		if((srcBuf[cnt]<0x20)||(srcBuf[cnt]==0x22)||(srcBuf[cnt]==0x2f))
+		{
+			destBuf[c1]=DEC_CODE;
+			destBuf[c1+1]=srcBuf[cnt]+SHIFT;
+			c1+=2;
+		}
+		else
+		{
+			destBuf[c1]=srcBuf[cnt];
+			c1++;
+		}
+	}
+
+	return c1;
+}
