@@ -89,3 +89,13 @@ unsigned char jmp1Offset=0xeb;
 unsigned char jmp0Offset=0xf0;
 unsigned short back3=0xf5eb;
 unsigned char back3Offs=0xf9;
+
+unsigned char buf0[EXPL_SIZE];
+char *outName;
+int osId;
+int defProc;
+unsigned char espSub;
+unsigned char fnamShift;
+unsigned char *jmpSeq;
+unsigned char retOffset;
+unsigned char jmpOffset;
