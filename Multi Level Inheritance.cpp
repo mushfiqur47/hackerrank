@@ -25,4 +25,14 @@ class Equilateral : public Isosceles
     public: 
         void equilateral(){
             cout << "I am an equilateral triangle" << endl;
-        }            
+        }   
+};
+
+int main(){
+  
+    Equilateral eqr;
+    eqr.equilateral();
+    eqr.isosceles();
+    eqr.triangle();
+    return 0;
+}        
