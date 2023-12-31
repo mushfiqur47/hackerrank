@@ -19,3 +19,8 @@ public:
     void display() const override {
         cout << (width * height) << endl;
     }   
+
+    void read_input() {
+        cin >> width >> height;
+    }
+};
