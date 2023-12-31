@@ -6,3 +6,13 @@
 using namespace std;
 
 
+class Triangle
+{
+        public:
+
+            void triangle()
+                {
+                cout<<"I am a triangle\n";
+            }
+};
+
