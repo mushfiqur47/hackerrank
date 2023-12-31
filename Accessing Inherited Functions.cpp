@@ -13,3 +13,16 @@ class A
         void inc(){
             callA++;
         }
+
+
+       protected:
+        void func(int & a)
+        {
+            a = a * 2;
+            inc();
+        }
+    public:
+        int getA(){
+            return callA;
+        }
+}; 
