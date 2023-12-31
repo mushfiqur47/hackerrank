@@ -25,3 +25,15 @@ public:
     static int getLoad() {
         return load;
     }
+};
+int Server::load = 0;
+
+int main() {
+    int T; cin >> T;
+    while(T--) {
+        long long A, B;
+        cin >> A >> B;
+
+        /* Enter your code here. */
+        try
+{    
