@@ -9,3 +9,10 @@ class Triangle{
 		void triangle(){
 			cout<<"I am a triangle\n";
 		}
+};
+
+class Isosceles : public Triangle{
+  	public:
+  		void isosceles(){
+    		cout<<"I am an isosceles triangle\n";
+  		}        
