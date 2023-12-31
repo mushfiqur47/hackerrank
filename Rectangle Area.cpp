@@ -24,3 +24,14 @@ public:
         cin >> width >> height;
     }
 };
+
+int main()
+{
+    /*
+     * Declare a RectangleArea object
+     */
+    RectangleArea r_area;
+    
+    /*
+     * Read the width and height
+     */
